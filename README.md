@@ -45,8 +45,16 @@ Ordre conseille:
 
 ## Deploiement Vercel
 
-1. Creer un repo GitHub.
-2. Pousser ce projet.
-3. Importer le repo dans Vercel.
-4. Ajouter les variables d'environnement.
-5. Deployer.
+Projet GitHub:
+
+- https://github.com/zwy54kgdbd-coder/service-center-tbt-phone-tech
+
+Projet Vercel:
+
+- https://service-center-tbt-phone-tech.vercel.app
+
+Variables d'environnement configurees en production:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `NEXT_PUBLIC_SITE_URL`
