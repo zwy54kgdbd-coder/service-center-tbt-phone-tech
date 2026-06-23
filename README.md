@@ -31,6 +31,11 @@ Copier `.env.example` vers `.env.local`, puis renseigner les variables Supabase.
 
 Le schema initial est dans `supabase/migrations/0001_initial_schema.sql`.
 
+Projet Supabase cree:
+
+- Project ID: `zdrxmoifktpjsognhwfi`
+- Project URL: `https://zdrxmoifktpjsognhwfi.supabase.co`
+
 Ordre conseille:
 
 1. Creer un projet Supabase.
