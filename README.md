@@ -43,6 +43,17 @@ Ordre conseille:
 3. Ajouter les variables `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_ANON_KEY` dans `.env.local`.
 4. Ajouter les memes variables dans Vercel.
 
+## Acces admin cache
+
+L'acces prive s'ouvre avec 3 appuis rapides sur le logo en haut a gauche du site. La page `/admin` permet de gerer le catalogue depuis mobile ou ordinateur.
+
+Variables serveur necessaires:
+
+- `ADMIN_USERNAME`
+- `ADMIN_ACCESS_CODE`
+- `ADMIN_SESSION_SECRET`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
 ## Deploiement Vercel
 
 Projet GitHub:
@@ -58,3 +69,7 @@ Variables d'environnement configurees en production:
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `NEXT_PUBLIC_SITE_URL`
+- `ADMIN_USERNAME`
+- `ADMIN_ACCESS_CODE`
+- `ADMIN_SESSION_SECRET`
+- `SUPABASE_SERVICE_ROLE_KEY`

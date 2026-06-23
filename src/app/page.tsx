@@ -12,7 +12,9 @@ import {
   Star,
   Wrench
 } from "lucide-react";
-import { company, featuredProducts, services, storePhotos } from "@/lib/site";
+import { HiddenAdminGate } from "@/components/hidden-admin-gate";
+import { getPublicProducts } from "@/lib/products";
+import { company, services, storePhotos } from "@/lib/site";
 
 const stats = [
   { label: "Diagnostic", value: "Sur place" },
@@ -23,14 +25,13 @@ const stats = [
 const mapUrl =
   "https://www.google.com/maps/search/?api=1&query=RTE%20DE%20CAMBRAI%20CENTRE%20COMMERCIAL%20AUCHAN%20LES%20EPIS%2059450%20SIN-LE-NOBLE";
 
-export default function Home() {
+export default async function Home() {
+  const publicProducts = await getPublicProducts();
+
   return (
     <main>
       <header className="site-header" aria-label="Navigation principale">
-        <a className="brand" href="#accueil" aria-label="SERVICE CENTER TBT PHONE TECH accueil">
-          <Image src={company.logo} alt="" width={52} height={52} priority />
-          <span>{company.brand}</span>
-        </a>
+        <HiddenAdminGate logo={company.logo} brand={company.brand} />
         <nav>
           <a href="#services">Services</a>
           <a href="#boutique">Boutique</a>
@@ -127,7 +128,7 @@ export default function Home() {
           <h2>Catalogue pret pour Supabase</h2>
         </div>
         <div className="product-grid">
-          {featuredProducts.map((product) => (
+          {publicProducts.map((product) => (
             <article className="product-card" key={product.name}>
               <span>{product.category}</span>
               <h3>{product.name}</h3>
