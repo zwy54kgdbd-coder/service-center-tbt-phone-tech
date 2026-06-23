@@ -97,21 +97,6 @@ nav {
   max-width: 650px;
 }
 
-.hero-logo {
-  width: 104px;
-  height: 104px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 18px;
-}
-
-.hero-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
 .eyebrow {
   margin: 0 0 10px;
   color: var(--blue);

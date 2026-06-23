@@ -5,6 +5,7 @@ import {
   Images,
   MapPin,
   MessageCircle,
+  Phone,
   ShieldCheck,
   ShoppingBag,
   Smartphone,
@@ -15,9 +16,12 @@ import { company, featuredProducts, services, storePhotos } from "@/lib/site";
 
 const stats = [
   { label: "Diagnostic", value: "Sur place" },
-  { label: "Services", value: "Mobile & tech" },
+  { label: "Services", value: "Deblocage compte d'acces" },
   { label: "Adresse", value: "Auchan Sin-le-Noble" }
 ];
+
+const mapUrl =
+  "https://www.google.com/maps/search/?api=1&query=RTE%20DE%20CAMBRAI%20CENTRE%20COMMERCIAL%20AUCHAN%20LES%20EPIS%2059450%20SIN-LE-NOBLE";
 
 export default function Home() {
   return (
@@ -47,19 +51,19 @@ export default function Home() {
         />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <div className="hero-logo">
-            <Image src={company.logo} alt="TBT Phone Tech" width={142} height={142} priority />
-          </div>
-          <p className="eyebrow">Service center smartphone</p>
           <h1>{company.brand}</h1>
           <p className="hero-copy">
-            Reparation mobile, accessoires, conseil et vente au centre commercial Auchan de
-            Sin-le-Noble.
+            Reparation mobile, tablette, ordinateur portable et fixe, console de jeux, accessoires,
+            conseil et vente au centre commercial Auchan de Sin-le-Noble.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#contact">
+            <a className="button primary" href={mapUrl} target="_blank" rel="noreferrer">
               <MapPin size={18} />
               Nous trouver
+            </a>
+            <a className="button secondary" href={`tel:${company.phone}`}>
+              <Phone size={18} />
+              Telephone
             </a>
             <a className="button secondary" href="#services">
               <Wrench size={18} />
@@ -158,9 +162,13 @@ export default function Home() {
           <h2>Retrouvez-nous en boutique</h2>
           <p>{company.address}</p>
           <div className="contact-actions">
-            <a className="button primary" href="https://maps.google.com/?q=Centre%20commercial%20Auchan%20Route%20de%20Cambrai%2059450%20Sin-le-Noble">
+            <a className="button primary" href={mapUrl} target="_blank" rel="noreferrer">
               <MapPin size={18} />
               Itineraire
+            </a>
+            <a className="button secondary" href={`tel:${company.phone}`}>
+              <Phone size={18} />
+              Appeler
             </a>
             <a className="button secondary" href="#avis">
               <MessageCircle size={18} />
@@ -175,7 +183,7 @@ export default function Home() {
         <aside className="legal-box">
           <Clock3 size={22} />
           <strong>{company.legalName}</strong>
-          <span>{company.legalForm} au capital de {company.capital}</span>
+          <span>{company.legalForm}</span>
           <span>{company.rcs}</span>
           <span>SIRET {company.siret}</span>
         </aside>

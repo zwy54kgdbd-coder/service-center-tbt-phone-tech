@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "SERVICE CENTER TBT PHONE TECH - Reparation mobile a Sin-le-Noble",
   description:
-    "SERVICE CENTER TBT PHONE TECH, service center smartphone au centre commercial Auchan de Sin-le-Noble: reparation mobile, accessoires, conseil et vente.",
+    "SERVICE CENTER TBT PHONE TECH au centre commercial Auchan de Sin-le-Noble: reparation mobile, tablette, ordinateur, console de jeux, accessoires, conseil et vente.",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "SERVICE CENTER TBT PHONE TECH",
-    description: "Reparation, accessoires et services smartphone a Sin-le-Noble.",
+    description: "Reparation mobile, tablette, ordinateur, console de jeux et accessoires a Sin-le-Noble.",
     images: ["/images/logo-magasin.png"]
   }
 };

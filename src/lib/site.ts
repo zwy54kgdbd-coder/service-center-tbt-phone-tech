@@ -3,12 +3,11 @@ export const company = {
   legalName: "SERVICE CENTER TBT PHONE TECH",
   tagline: "Reparer. Connecter. Satisfaire.",
   legalForm: "SAS",
-  capital: "1 000 EUR",
   rcs: "940 196 140 R.C.S. Douai",
   siret: "94019614000013",
-  address: "Centre commercial Auchan, Route de Cambrai, 59450 Sin-le-Noble",
+  address: "RTE DE CAMBRAI CENTRE COMMERCIAL AUCHAN LES EPIS 59450 SIN-LE-NOBLE",
   city: "Sin-le-Noble",
-  phone: "",
+  phone: "0758253136",
   email: "",
   facebook: "https://www.facebook.com/profile.php?id=61552765967155",
   googleBusinessUrl: "",
@@ -20,7 +19,8 @@ export const company = {
 export const services = [
   {
     title: "Reparation mobile",
-    description: "Diagnostic, ecran, batterie, connecteur de charge et petites pannes du quotidien."
+    description:
+      "Diagnostic, ecran, batterie, connecteur de charge et petites pannes sur mobile, tablette, ordinateur portable et fixe, console de jeux."
   },
   {
     title: "Accessoires",
@@ -28,7 +28,8 @@ export const services = [
   },
   {
     title: "Conseil et vente",
-    description: "Aide au choix, transfert de donnees, configuration et solutions utiles en boutique."
+    description:
+      "Aide au choix, transfert de donnees, configuration, deblocage compte d'acces et solutions utiles en boutique."
   }
 ];
 
