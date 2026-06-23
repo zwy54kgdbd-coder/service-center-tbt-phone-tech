@@ -6,6 +6,20 @@ export const metadata: Metadata = {
   title: "SERVICE CENTER TBT PHONE TECH - Reparation mobile a Sin-le-Noble",
   description:
     "SERVICE CENTER TBT PHONE TECH, service center smartphone au centre commercial Auchan de Sin-le-Noble: reparation mobile, accessoires, conseil et vente.",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" }
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }]
+  },
+  appleWebApp: {
+    capable: true,
+    title: "SERVICE CENTER",
+    statusBarStyle: "black-translucent"
+  },
   openGraph: {
     title: "SERVICE CENTER TBT PHONE TECH",
     description: "Reparation, accessoires et services smartphone a Sin-le-Noble.",
