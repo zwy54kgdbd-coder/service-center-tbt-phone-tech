@@ -12,8 +12,9 @@ import {
   Wrench
 } from "lucide-react";
 import { HiddenAdminGate } from "@/components/hidden-admin-gate";
+import { getPublicStorePhotos } from "@/lib/gallery";
 import { getPublicProducts } from "@/lib/products";
-import { company, services, storePhotos } from "@/lib/site";
+import { company, services } from "@/lib/site";
 
 const stats = [
   { label: "Diagnostic", value: "Sur place" },
@@ -26,6 +27,7 @@ const mapUrl =
 
 export default async function Home() {
   const publicProducts = await getPublicProducts();
+  const publicStorePhotos = await getPublicStorePhotos();
 
   return (
     <main>
@@ -113,9 +115,9 @@ export default async function Home() {
           </a>
         </div>
         <div className="gallery-grid">
-          {storePhotos.map((photo, index) => (
+          {publicStorePhotos.map((photo, index) => (
             <figure className={index === 0 ? "gallery-item large" : "gallery-item"} key={photo.src}>
-              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 860px) 100vw, 33vw" />
+              <img src={photo.src} alt={photo.alt} />
             </figure>
           ))}
         </div>

@@ -30,6 +30,7 @@ Copier `.env.example` vers `.env.local`, puis renseigner les variables Supabase.
 ## Supabase
 
 Le schema initial est dans `supabase/migrations/0001_initial_schema.sql`.
+La gestion des photos du magasin est dans `supabase/migrations/0002_store_photos.sql`.
 
 Projet Supabase cree:
 
@@ -45,7 +46,7 @@ Ordre conseille:
 
 ## Acces admin cache
 
-L'acces prive s'ouvre avec 3 appuis rapides sur le logo en haut a gauche du site. La page `/admin` permet de gerer le catalogue depuis mobile ou ordinateur.
+L'acces prive s'ouvre avec 3 appuis rapides sur le logo en haut a gauche du site. La page `/admin` permet de gerer le catalogue et les photos depuis mobile ou ordinateur.
 
 Variables serveur necessaires:
 

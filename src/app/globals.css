@@ -313,6 +313,8 @@ h3 {
 }
 
 .gallery-item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -550,6 +552,31 @@ h3 {
   color: var(--muted);
 }
 
+.admin-tabs {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.admin-tab {
+  min-height: 40px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 16px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.admin-tab.active {
+  background: var(--blue);
+  color: #fff;
+}
+
 .admin-workspace {
   display: grid;
   grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
@@ -659,6 +686,10 @@ h3 {
   color: var(--ink);
 }
 
+.mini-button.danger {
+  color: #b42318;
+}
+
 .status-pill {
   background: #f2f4f7;
   color: var(--muted);
@@ -667,6 +698,23 @@ h3 {
 .status-pill.active {
   background: #ecfdf3;
   color: #067647;
+}
+
+.photo-list {
+  gap: 0;
+}
+
+.admin-photo {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) auto;
+}
+
+.admin-photo img {
+  width: 118px;
+  height: 88px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #d9e0e8;
 }
 
 @media (max-width: 860px) {
@@ -718,6 +766,14 @@ h3 {
   .review-button {
     justify-self: start;
   }
+
+  .admin-photo {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+
+  .admin-photo .admin-product-actions {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 520px) {
@@ -745,5 +801,20 @@ h3 {
 
   .admin-product-actions {
     justify-content: flex-start;
+  }
+
+  .admin-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .admin-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-photo img {
+    width: 100%;
+    height: 190px;
   }
 }
