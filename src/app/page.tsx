@@ -4,7 +4,6 @@ import {
   Facebook,
   Images,
   MapPin,
-  MessageCircle,
   Phone,
   ShieldCheck,
   ShoppingBag,
@@ -143,8 +142,7 @@ export default async function Home() {
           <p className="eyebrow">Avis Google</p>
           <h2>Votre retour compte</h2>
           <p>
-            Scannez le QR code pour partager votre experience avec SERVICE CENTER TBT PHONE TECH apres votre
-            passage en boutique.
+            Partagez votre experience avec SERVICE CENTER TBT PHONE TECH apres votre passage en boutique.
           </p>
           <div className="stars" aria-label="Avis clients">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -152,9 +150,10 @@ export default async function Home() {
             ))}
           </div>
         </div>
-        <div className="qr-panel">
-          <Image src={company.googleReviewQr} alt="QR code Avis Google" width={132} height={132} />
-        </div>
+        <a className="button review-button" href={company.googleReviewUrl} target="_blank" rel="noreferrer">
+          <Star size={18} fill="currentColor" />
+          Donner un avis
+        </a>
       </section>
 
       <section id="contact" className="section contact-section">
@@ -171,8 +170,8 @@ export default async function Home() {
               <Phone size={18} />
               Appeler
             </a>
-            <a className="button secondary" href="#avis">
-              <MessageCircle size={18} />
+            <a className="button secondary" href={company.googleReviewUrl} target="_blank" rel="noreferrer">
+              <Star size={18} />
               Laisser un avis
             </a>
             <a className="button secondary" href={company.facebook} target="_blank" rel="noreferrer">

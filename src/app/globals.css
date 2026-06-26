@@ -244,8 +244,7 @@ h3 {
 
 .service-card,
 .product-card,
-.legal-box,
-.qr-panel {
+.legal-box {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -337,7 +336,7 @@ h3 {
 
 .review-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 34px;
   padding: 70px clamp(20px, 6vw, 84px);
@@ -357,19 +356,11 @@ h3 {
   color: var(--gold);
 }
 
-.qr-panel {
-  width: 190px;
-  height: 190px;
-  display: grid;
-  place-items: center;
+.review-button {
   justify-self: end;
   background: #fff;
-}
-
-.qr-panel img {
-  width: 132px;
-  height: 132px;
-  image-rendering: pixelated;
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .contact-section {
@@ -695,7 +686,7 @@ h3 {
     margin-top: 54px;
   }
 
-  .qr-panel {
+  .review-button {
     justify-self: start;
   }
 }

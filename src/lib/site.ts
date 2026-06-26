@@ -10,8 +10,7 @@ export const company = {
   phone: "0758253136",
   email: "",
   facebook: "https://www.facebook.com/profile.php?id=61552765967155",
-  googleBusinessUrl: "",
-  googleReviewQr: "/images/avis-google-qr.png",
+  googleReviewUrl: "https://g.page/r/CU5KWXp6__vxEAE/review",
   logo: "/images/logo-magasin.png",
   ticketLogo: "/images/logo-ticket.png"
 };
