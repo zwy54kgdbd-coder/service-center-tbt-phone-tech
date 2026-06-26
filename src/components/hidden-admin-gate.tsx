@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useRef, useState } from "react";
-import { Lock, X } from "lucide-react";
+import { Eye, EyeOff, Lock, X } from "lucide-react";
 
 type HiddenAdminGateProps = {
   logo: string;
@@ -15,6 +15,7 @@ export function HiddenAdminGate({ logo, brand }: HiddenAdminGateProps) {
   const [accessCode, setAccessCode] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isAccessCodeVisible, setIsAccessCodeVisible] = useState(false);
   const tapCount = useRef(0);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -93,13 +94,23 @@ export function HiddenAdminGate({ logo, brand }: HiddenAdminGateProps) {
               </label>
               <label>
                 Code d&apos;acces
-                <input
-                  autoComplete="current-password"
-                  type="password"
-                  value={accessCode}
-                  onChange={(event) => setAccessCode(event.target.value)}
-                  required
-                />
+                <span className="password-field">
+                  <input
+                    autoComplete="current-password"
+                    type={isAccessCodeVisible ? "text" : "password"}
+                    value={accessCode}
+                    onChange={(event) => setAccessCode(event.target.value)}
+                    required
+                  />
+                  <button
+                    type="button"
+                    className="password-toggle"
+                    onClick={() => setIsAccessCodeVisible((isVisible) => !isVisible)}
+                    aria-label={isAccessCodeVisible ? "Masquer le code" : "Afficher le code"}
+                  >
+                    {isAccessCodeVisible ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </span>
               </label>
               {error ? <p className="admin-error">{error}</p> : null}
               <button className="button primary" type="submit" disabled={isLoading}>
